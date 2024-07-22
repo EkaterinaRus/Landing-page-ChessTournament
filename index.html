@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Клуб четырех коней</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Международный васюкинский турнир</h1>
+    <div class="header__inner container">
+      <a class="header__logo logo" href="#">
+        <img class="logo__img" src="./images/logo.svg" alt="Logo" loading="lazy" width="246" />
+      </a>
+
+      <div class="header__content">
+        <div class="header__title">
+          <span class="header__title-part">Превратите <br />уездный город</span>
+          <span class="header__title-part header__title-part--center">в столицу</span>
+          <span class="header__title-part header__title-part--end">земного шара</span>
+        </div>
+        <p class="header__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по
+          шахматам</p>
+
+        <nav class="header__btn-container">
+          <a class="btn btn--dark" href="#about">Поддержать шахматную мысль</a>
+          <a class="btn btn--outline" href="#stages">Подробнее о турнире</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="ticker" aria-label="Цитаты">
+      <div class="ticker__viewport" role="region" aria-live="polite">
+        <ul class="ticker__list">
+          <li class="ticker__item">Дело помощи утопающим — дело рук самих утопающих!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+          <li class="ticker__item">Шахматы двигают вперед не только культуру, но и экономику!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+          <li class="ticker__item">Лед тронулся, господа присяжные заседатели!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about__inner container">
+        <h2 class="visually-hidden">О турнире</h2>
+        <div class="about__content">
+          <div class="about__top">
+            <div class="about__text about__text-part--first"></div>
+            <img class="about__img-top" src="./images/about/men-playing-chess.png" alt="Мужчины играют в шахматы" />
+            <div class="about__text about__text-part--second"></div>
+          </div>
+
+          <div class="about__bottom">
+            <div class="about__img-container"></div>
+            <div class="about__bottom-content">
+              <div class="about__text">
+                и Сеанс <span class="text-accent">одновременной игры в шахматы на 160 досках</span> гроссмейстера О.
+                Бендера
+              </div>
+              <table class="about__table table">
+                <tbody>
+                  <tr class="table__row table__row--flex">
+                    <th class="table__header" scope="row">Место проведения:</th>
+                    <td class="table__data">Клуб «Картонажник»</td>
+                  </tr>
+                  <tr class="table__row table__row--flex">
+                    <th class="table__header" scope="row">Дата и время мероприятия:</th>
+                    <td class="table__data"><time datetime="1927-06-22T18:00">22 июня 1927 г. в 18:00</time></td>
+                  </tr>
+                  <tr class="table__row table__row--flex">
+                    <th class="table__header" scope="row">Стоимость входных билетов:</th>
+                    <td class="table__data">20 коп.</td>
+                  </tr>
+                  <tr class="table__row table__row--flex table__row--inline">
+                    <th class="table__header table__header-inline" scope="row">Плата за игру:</th>
+                    <td class="table__data table__data--inline">50 коп.</td>
+                  </tr>
+                  <tr class="table__row table__row--flex">
+                    <th class="table__header" scope="row">Взнос на телеграммы:</th>
+                    <td class="table__data"><s class="discounted-price">100 руб.</s> 21 руб. 16 коп.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="about__contact">По всем вопросам обращаться в администрацию к К. Михельсону</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stages" id="stages">
+      <div class="stages__inner container">
+        <header class="stages__header">
+          <h2 class="stages__title section-title">Этапы преображения <br />Васюков</h2>
+        </header>
+        <div class="stages__content carousel">
+          <ol class="stages__list carousel__wrapper">
+            <li class="stages__item carousel__slide">
+              <p class="stages__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+            </li>
+            <li class="stages__item carousel__slide">
+              <p class="stages__text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+            </li>
+            <li class="stages__item stages__item--row carousel__slide">
+              <p class="stages__text">
+                Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры,
+                шоколадных конфет
+              </p>
+            </li>
+            <li class="stages__item carousel__slide">
+              <p class="stages__text">Строительство дворца для турнира</p>
+            </li>
+            <li class="stages__item carousel__slide">
+              <p class="stages__text">Размещение гаражей для гостевого автотранспорта</p>
+            </li>
+            <li class="stages__item carousel__slide">
+              <p class="stages__text">Постройка сверхмощной радиостанции для передачи всему миру сенсационных
+                результатов</p>
+            </li>
+            <li class="stages__item stages__item--column stages__item--image carousel__slide">
+              <p class="stages__text stages__text--last">
+                Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей
+                во все концы света, включая
+                Лос-Анжелос и Мельбурн
+              </p>
+            </li>
+          </ol>
+
+          <nav class="carousel__navigation visually-hidden" aria-label="Навигация карусели">
+            <button class="carousel__btn carousel__btn--prev" aria-label="Предыдущий элемент">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841" stroke="white" stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </button>
+            <ul class="carousel__pagination">
+              <!-- <li class="selected" aria-current="true"></li> -->
+            </ul>
+            <button class="carousel__btn carousel__btn--next" aria-label="Следующий элемент">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="white" stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="participants">
+      <div class="participants__inner container">
+        <header class="participants__header">
+          <h2 class="participants__title section-title">Участники турнира</h2>
+        </header>
+        <div class="participants__content carousel">
+          <ul class="participants__list carousel__wrapper">
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Хозе-Рауль Капабланка</h3>
+                  <p class="participant-card__subtitle">Чемпион мира по шахматам</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Эммануил Ласкер</h3>
+                  <p class="participant-card__subtitle">Чемпион мира по шахматам</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Александр Алехин</h3>
+                  <p class="participant-card__subtitle">Чемпион мира по шахматам</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Арон Нимцович</h3>
+                  <p class="participant-card__subtitle">Чемпион мира по шахматам</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Рихард Рети</h3>
+                  <p class="participant-card__subtitle">Чемпион мира по шахматам</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="participants__item carousel__slide">
+              <article class="participant-card">
+                <div class="participant-card__header">
+                  <div class="participant-card__foto">
+                    <img class="participant-card__img" src="./images/participants/foto.jpg" alt="Фото участника"
+                      draggable="false" />
+                  </div>
+                </div>
+                <div class="participant-card__body">
+                  <h3 class="participant-card__title">Остап Бендер</h3>
+                  <p class="participant-card__subtitle">Гроссмейстер</p>
+                </div>
+                <div class="participant-card__footer">
+                  <div class="participant-card__actions">
+                    <a class="participant-card__button btn">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <nav class="carousel__navigation" aria-label="Навигация карусели">
+            <button class="carousel__btn carousel__btn--prev" id="prev" aria-label="Предыдущий элемент">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841" stroke="white" stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </button>
+            <div class="carousel__pagination">
+              <span class="carousel__pagination--current"></span> /
+              <span class="carousel__pagination--total"></span>
+            </div>
+            <button class="carousel__btn carousel__btn--next" id="next" aria-label="Следующий элемент">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="white" stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="ticker" aria-label="Цитаты">
+      <div class="ticker__viewport" role="region" aria-live="polite">
+        <ul class="ticker__list">
+          <li class="ticker__item">Дело помощи утопающим — дело рук самих утопающих!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+          <li class="ticker__item">Шахматы двигают вперед не только культуру, но и экономику!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+          <li class="ticker__item">Лед тронулся, господа присяжные заседатели!</li>
+          <li class="ticker__item">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner container">
+      <p>
+        Все персонажи, события и цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта.
+        С&nbsp;подробностями можно познакомиться
+        в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова «Двенадцать стульев».
+      </p>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+  <script src="./js/script-p.js"></script>
+  <script src="./js/script-p-copy.js"></script>
+</body>
+
+</html>
