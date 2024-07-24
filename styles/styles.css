@@ -215,6 +215,11 @@ body {
     transition: all 0.2s linear;
 }
 
+.carousel__btn:focus-visible {
+    outline: 2px double #F54932;
+    outline-offset: 1px;
+}
+
 .carousel__btn--prev::after {
     display: none;
     content: '';
@@ -271,10 +276,15 @@ body {
     left: auto;
 }
 
+a:focus-visible {
+    outline: 2px double #F54932;
+    outline-offset: 1px;
+}
+
 /*-----header-----*/
 
 .header {
-    background-color: rgb(108, 113, 98);
+    background-color: #E9DED4;
     background-image: url(./../images/header/bg-img-1920.jpg);
     background-position: center;
     background-size: cover;
@@ -287,7 +297,7 @@ body {
 }
 
 .header__logo {
-    display: block;
+    display: inline-block;
     margin-bottom: clamp(42px, 10vw, 62px);
 }
 
@@ -348,6 +358,13 @@ body {
     color: var(--color-btn-dark);
 }
 
+.btn--dark:active {
+    border-radius: .75rem;
+    transition-duration: .2s;
+    background-color: var(--color-btn-hover);
+    color: var(--color-btn-dark);
+}
+
 .btn--outline {
     padding: 13px 49px;
     border: 2px solid #1F1F1F;
@@ -358,6 +375,13 @@ body {
 }
 
 .btn--outline:hover {
+    background-color: var(--color-btn-dark);
+    color: var(--color-text-light);
+}
+
+.btn--outline:active {
+    border-radius: .75rem;
+    transition-duration: .2s;
     background-color: var(--color-btn-dark);
     color: var(--color-text-light);
 }
@@ -828,6 +852,7 @@ body {
     background-color: #E9DED4;
     background-image: url(../images/stages/stages-bg-830x300.jpg);
     background-position: top left;
+    /* background-repeat: no-repeat; */
     font-weight: 500;
     scroll-snap-align: start;
 }
@@ -929,7 +954,11 @@ p.stages__text:not(:last-child) {
 
 }
 
-
+@media (min-width: 768px) {
+    .carousel__btn--lock{
+        display: none !important;
+    }
+}
 @media (max-width: 767px) {
 
     .stages__title {
@@ -994,6 +1023,10 @@ p.stages__text:not(:last-child) {
         margin-inline: 16px;
     }
 
+    .visible-mobile {
+        display: none !important;
+    }
+
     .carousel__dot {
         width: 10px;
         height: 10px;
@@ -1022,8 +1055,7 @@ p.stages__text:not(:last-child) {
 
 }
 
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 575px) {
 
     .stages__content::before {
         content: '';
@@ -1041,22 +1073,70 @@ p.stages__text:not(:last-child) {
     }
 
     .stages__list {
+        display: grid;
+        grid-template-columns: none;
         grid-auto-flow: column;
-        flex-wrap: wrap;
+        grid-auto-columns: 100%;
+        gap: 20px;
+    }
+
+    .stages__content .carousel__wrapper {
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        scrollbar-width: 0;
+        scrollbar-width: none;
     }
 
     .stages__item {
         min-height: 300px;
-        width: 335px;
+        font-size: 18px;
     }
 
     .stages__text {
         max-width: 300px;
     }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    /* .stages__content::before {
+        content: '';
+        position: absolute;
+        top: 73px;
+        left: 8px;
+
+        width: 335px;
+        height: 215px;
+
+        background-image: url('../images/stages/airplane-335.png');
+        background-repeat: no-repeat;
+        z-index: 10;
+        transform: translateY(-100%);
+    }
+
+    .stages__list {
+        display: grid;
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        gap: 20px;
+    }
+
+    .stages__content .carousel__wrapper {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    } */
+
+    .stages__item {
+        width: 335px;
+    }
+
+    /* .stages__text {
+        max-width: 300px;
+    } */
 
 }
 
@@ -1120,6 +1200,7 @@ p.stages__text:not(:last-child) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     text-align: center;
     padding-inline: 37px;
     color: #151515;
@@ -1174,6 +1255,13 @@ p.stages__text:not(:last-child) {
 }
 
 .participant-card__button:hover {
+    background: var(--color-accent-dark);
+    color: #fff;
+}
+
+.participant-card__button:active {
+    border-radius: .75rem;
+    transition-duration: .2s;
     background: var(--color-accent-dark);
     color: #fff;
 }

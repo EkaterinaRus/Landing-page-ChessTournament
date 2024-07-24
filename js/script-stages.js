@@ -129,7 +129,7 @@ arrowBtnsStages.forEach((btn) => {
 
 
 function initCarousel() {
-  if (window.innerWidth < 767) {
+  if (window.innerWidth < 768) {
     combineListItems();
     showIndicator();
     updateCarousel();
@@ -142,64 +142,3 @@ function checkScreenSize() {
 
 // Вызываем функцию при загрузке страницы
 checkScreenSize();
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Добавляем обработчики событий для изменения размера окна
-//window.addEventListener('resize', checkScreenSize);
-
-
-
-// Добавляем обработчик событий для всех индикаторов
-// document.querySelectorAll('.carousel__pagination li').forEach((indicator, ind) => {
-//   indicator.addEventListener('click', () => {
-//     sectionIndex = ind;
-//     updateCarousel();
-//   });
-// });
-
-
-
-
-// Инициализируем карусель
-
-
-// const listStages = [
-//   'Строительство железнодорожной магистрали Москва-Васюки',
-//   'Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов',
-//   'Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет',
-//   'Строительство дворца для турнира',
-//   'Размещение гаражей для гостевого автотранспорта',
-//   'Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов',
-//   'Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн'
-// ]
-
-// const newListStages = [];
-
-// for (let i = 0; i < listStages.length; i++) {
-//   let lengthItem = listStages[i].length;
-//   let lengtNexthItem = listStages[i+1].length;
-//   //console.log(lengthItem);
-//   //console.log(lengtNexthItem);
-//   let sumItemNexthItem = lengthItem + lengtNexthItem;
-//   console.log(sumItemNexthItem, lengthItem, lengtNexthItem);
-
-//   if (sumItemNexthItem <= 125) {
-//     let newItem = listStages[i] + listStages[i+1];
-//     newListStages.push(newItem);
-//   } else {
-//     newListStages.push(listStages[i]);
-//     newListStages.push(listStages[i+1]);
-//   }
-//   console.log(newListStages);
-// }

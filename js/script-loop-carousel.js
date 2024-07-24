@@ -1,6 +1,5 @@
 const wrapper = document.querySelector(".participants__content")
 const carousel = wrapper.querySelector(".carousel__wrapper");
-console.log(carousel.scrollLeft)
 const arrowBtns = wrapper.querySelectorAll(".carousel__btn");
 const firstCardWidth = carousel.querySelector(".carousel__slide").offsetWidth;
 const carouselChildrens = [...carousel.children];
@@ -28,6 +27,7 @@ arrowBtns.forEach(btn => {
   });  
 });
 
+
 // const dragStart = (e) => {
 //   isDragging = true;
 //   carousel.classList.add("dragging");
@@ -45,20 +45,13 @@ arrowBtns.forEach(btn => {
 //   carousel.classList.remove("dragging");
 // }
 
-
 const autoPlay = () => {
-  // if(window.innerWidth < 800) return;
   timeoutId = setTimeout(() => carousel.scrollLeft += carousel.offsetWidth, 4000);
 }
 
-//autoPlay();
+autoPlay();
 
 const infiniteScroll = () => {
-  // console.log(carousel.scrollWidth)
-  // console.log(carousel.offsetWidth)
-  // console.log(carousel.scrollWidth - carousel.offsetWidth)
-  // console.log(carousel.scrollLeft)
-  console.log(carousel.scrollLeft)
   if(carousel.scrollLeft === 0) {
     
     carousel.classList.add("no-transition");
@@ -74,16 +67,16 @@ const infiniteScroll = () => {
     carousel.classList.remove("no-transition");
   }
 
-  // clearTimeout(timeoutId);
-  //  if(!wrapper.matches(":hover")) autoPlay();
+  clearTimeout(timeoutId);
+  if(!wrapper.matches(":hover")) autoPlay();
 }
 
-// carousel.addEventListener("mousedown" , dragStart);
-// carousel.addEventListener("mousemove" , dragging);
-// document.addEventListener("mouseup" , dragStop);
+// carousel.addEventListener("mousedown", dragStart);
+// carousel.addEventListener("mousemove", dragging);
+// document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-// wrapper.addEventListener("mouseleave", autoPlay);
+wrapper.addEventListener("mouseleave", autoPlay);
 
 let timeout;
 

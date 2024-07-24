@@ -38,46 +38,6 @@ function initializeTickers() {
 
 initializeTickers();
 
-
-
-
-// const ticker = document.querySelector('.ticker__list');
-// const tickerItem = ticker.querySelectorAll('.ticker__item');
-// const itemCount = ticker.querySelectorAll('.ticker__item').length;
-// let viewportWidth = 0;
-
-// const setupViewport = () => {
-//   ticker.querySelectorAll('.ticker__item').forEach(item => {
-//     const clonedItem = item.cloneNode(true);
-//     ticker.insertBefore(clonedItem, ticker.lastChild);
-//   });
-
-//   for (let i = 0; i < itemCount; i++) {
-//     const itemWidth = ticker.querySelectorAll('.ticker__item')[i].offsetWidth;
-//     console.log(itemWidth)
-//     viewportWidth += itemWidth;
-//   }
-
-//   ticker.style.width = `${viewportWidth}px`;
-// };
-
-// const animateTicker = () => {
-//   ticker.animate([
-//     { marginLeft: `-${viewportWidth}px` }
-//   ], {
-//     duration: 30000,
-//     easing: "linear",
-//     iterations: Infinity
-//   });
-// };
-
-// function initializeTicker() {
-//   setupViewport();
-//   animateTicker();
-// }
-
-// initializeTicker() 
-
 const aboutTextFirst = document.querySelector('.about__text-part--first');
 const aboutTextSecond = document.querySelector('.about__text-part--second');
 
