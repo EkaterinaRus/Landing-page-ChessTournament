@@ -285,7 +285,7 @@ a:focus-visible {
 
 .header {
     background-color: #E9DED4;
-    background-image: url(./../images/header/bg-img-1920.jpg);
+    background-image: url(./../images/header/bg-img-1920.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -298,7 +298,7 @@ a:focus-visible {
 
 .header__logo {
     display: inline-block;
-    margin-bottom: clamp(42px, 10vw, 62px);
+    margin-bottom: clamp(38px, 10vw, 58px);
 }
 
 .logo__img {
@@ -412,7 +412,12 @@ a:focus-visible {
 @media screen and (max-width: 767px) {
 
     .header {
-        background-image: url(./../images/header/bg-img-800.jpg);
+        background-image: url(./../images/header/bg-img-800.webp);
+        background-position: center bottom;
+    }
+
+    .header__inner {
+        padding-bottom: 291px;
     }
 
     .header__content {
@@ -472,7 +477,6 @@ a:focus-visible {
 
     .header__inner {
         padding-top: 18px;
-        padding-bottom: 291px;
     }
 
 }
@@ -480,11 +484,20 @@ a:focus-visible {
 @media screen and (max-width: 375px) {
 
     .header {
-        background-position-x: -326px;
-
+        background-position-x: -218px;
     }
 }
 
+@media (max-width: 374px) {
+
+    .header__content {
+        min-width: 250px;
+    }
+
+    .header__title-part--center {
+        align-self: start;
+    }
+}
 
 /*----ticker-----*/
 
@@ -578,7 +591,7 @@ a:focus-visible {
     width: 530px;
     height: 568px;
 
-    background-image: url(../images/Frame\ 48095654\ \(5\)-Photoroom.png);
+    background-image: url(../images/about/men-chess.webp);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -800,6 +813,18 @@ a:focus-visible {
     .about__img-top {
         width: 100%;
     }
+
+    .about__text--bottom {
+        text-wrap: balance;
+    }
+}
+
+@media (max-width: 374px) {
+
+    .about__img-container::before {
+        left: 0px;
+        width: 100%;
+    }
 }
 
 
@@ -850,7 +875,7 @@ a:focus-visible {
     padding: 20px 20px 20px 72px;
     list-style: none;
     background-color: #E9DED4;
-    background-image: url(../images/stages/stages-bg-830x300.jpg);
+    background-image: url(../images/stages/stages-bg-830x300.webp);
     background-position: top left;
     /* background-repeat: no-repeat; */
     font-weight: 500;
@@ -896,7 +921,7 @@ a:focus-visible {
     width: 380px;
     height: 235px;
 
-    background-image: url('../images/stages/airplane.png');
+    background-image: url('../images/stages/airplane.webp');
     z-index: 10;
 }
 
@@ -955,10 +980,11 @@ p.stages__text:not(:last-child) {
 }
 
 @media (min-width: 768px) {
-    .carousel__btn--lock{
+    .carousel__btn--lock {
         display: none !important;
     }
 }
+
 @media (max-width: 767px) {
 
     .stages__title {
@@ -980,7 +1006,7 @@ p.stages__text:not(:last-child) {
         width: 335px;
         height: 215px;
 
-        background-image: url('../images/stages/airplane-335.png');
+        background-image: url('../images/stages/airplane-335.webp');
         background-repeat: no-repeat;
         z-index: 10;
         right: 50%;
@@ -1058,33 +1084,8 @@ p.stages__text:not(:last-child) {
 @media screen and (max-width: 575px) {
 
     .stages__content::before {
-        content: '';
-        position: absolute;
-        top: 73px;
         left: 8px;
-
-        width: 335px;
-        height: 215px;
-
-        background-image: url('../images/stages/airplane-335.png');
-        background-repeat: no-repeat;
-        z-index: 10;
         transform: translateY(-100%);
-    }
-
-    .stages__list {
-        display: grid;
-        grid-template-columns: none;
-        grid-auto-flow: column;
-        grid-auto-columns: 100%;
-        gap: 20px;
-    }
-
-    .stages__content .carousel__wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
     }
 
     .stages__item {
@@ -1100,44 +1101,20 @@ p.stages__text:not(:last-child) {
 
 @media screen and (max-width: 375px) {
 
-    /* .stages__content::before {
-        content: '';
-        position: absolute;
-        top: 73px;
-        left: 8px;
-
-        width: 335px;
-        height: 215px;
-
-        background-image: url('../images/stages/airplane-335.png');
-        background-repeat: no-repeat;
-        z-index: 10;
-        transform: translateY(-100%);
-    }
-
-    .stages__list {
-        display: grid;
-        grid-template-columns: none;
-        grid-auto-flow: column;
-        grid-auto-columns: 100%;
-        gap: 20px;
-    }
-
-    .stages__content .carousel__wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-    } */
-
     .stages__item {
         width: 335px;
     }
+}
 
-    /* .stages__text {
-        max-width: 300px;
-    } */
+@media (max-width: 374px) {
 
+    .stages__item {
+        width: 100%;
+    }
+
+    .stages__text {
+        max-width: 100%;
+    }
 }
 
 /*-----participant-----*/
@@ -1166,7 +1143,6 @@ p.stages__text:not(:last-child) {
     grid-auto-flow: column;
     grid-auto-columns: calc((100% /3) - 13px);
     gap: 20px;
-    /* flex-wrap: wrap; */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;

@@ -27,24 +27,6 @@ arrowBtns.forEach(btn => {
   });  
 });
 
-
-// const dragStart = (e) => {
-//   isDragging = true;
-//   carousel.classList.add("dragging");
-//   startX = e.pageX;
-//   startScrollLeft = carousel.scrollLeft;
-// }
-
-// const dragging = (e) => {
-//   if(!isDragging) return
-//   carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-// }
-
-// const dragStop = () => {
-//   isDragging = false;
-//   carousel.classList.remove("dragging");
-// }
-
 const autoPlay = () => {
   timeoutId = setTimeout(() => carousel.scrollLeft += carousel.offsetWidth, 4000);
 }
@@ -53,7 +35,6 @@ autoPlay();
 
 const infiniteScroll = () => {
   if(carousel.scrollLeft === 0) {
-    
     carousel.classList.add("no-transition");
     carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth);
     carousel.classList.remove("no-transition");
@@ -71,18 +52,14 @@ const infiniteScroll = () => {
   if(!wrapper.matches(":hover")) autoPlay();
 }
 
-// carousel.addEventListener("mousedown", dragStart);
-// carousel.addEventListener("mousemove", dragging);
-// document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
 let timeout;
 
-// Функция для получения номера текущего слайда
 const updateSlideNumber = () => {
-  clearTimeout(timeout); // Очищаем предыдущий таймаут
+  clearTimeout(timeout); 
   timeout = setTimeout(() => {
     let scrollLeft = carousel.scrollLeft - firstCardWidth;
     if (scrollLeft < 0) {
@@ -90,8 +67,7 @@ const updateSlideNumber = () => {
     }
     const currentSlide = Math.round(scrollLeft / firstCardWidth) % cardTotal + 1;
     document.querySelector(".carousel__pagination--current").textContent = currentSlide;
-  }, 100); // Устанавливаем таймаут на 150 мс
+  }, 100); 
 };
 
-// Добавляем обработчик событий к карусели
 carousel.addEventListener("scroll", updateSlideNumber);
